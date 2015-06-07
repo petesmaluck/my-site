@@ -6,7 +6,7 @@ ignore 'templates/*'
 
 # Create a new instance of WordPress. Replace the URL with the URL of your
 # rest server endpoint.
-wordpress = WordPress.new('http://middleman-wordpress-example.dev/wp-json')
+wordpress = WordPress.new('http://petesmaluck.com/wp-json')
 
 # Dynamically generate pages using wordpress data
 wordpress.posts.each do |post|
