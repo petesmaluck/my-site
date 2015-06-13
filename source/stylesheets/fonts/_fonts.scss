@@ -9,7 +9,7 @@
 }
 
 @font-face {
-    font-family: "paragraph";
+    font-family: "par";
     src: url("../fonts/GalaxiePolarisBook.otf");
 }
 
@@ -19,6 +19,21 @@
 }
 
 @font-face {
-    font-family: "paragraph_italic";
+    font-family: "par_italic";
     src: url("../fonts/GalaxiePolarisBookItalic.otf");
+}
+
+@font-face {
+    font-family: "par-bold";
+    src: url("../fonts/akzidenz-grotesk-bold.ttf");
+}
+
+@font-face {
+    font-family: "helveticaNeue";
+    src: url("../fonts/helvetica.ttf");
+}
+
+@font-face {
+    font-family: "helveticaNeue_thin";
+    src: url("../fonts/helvetica-thin.ttf");
 }

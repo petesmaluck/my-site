@@ -3,6 +3,7 @@
 @import"base/base";
 @import"neat/neat";
 @import"fonts/fonts";
+@import"layouts/base";
 
 body {
   padding: 1em;
@@ -10,10 +11,13 @@ body {
 
 .header {
   @include clearfix();
-  border-bottom: 1px solid $light-gray;
-  margin-bottom: $gutter;
-  padding-bottom: 1em;
-
+  padding-bottom: 0em;
+  max-width: 640px;
+  margin: 0 auto;
+  p {
+    margin-bottom: 0em;
+    color: darken($light-gray,10);
+  }
   h1 {
     font-size: 1em;
     float: left;
@@ -26,6 +30,7 @@ body {
   li {
     display: inline-block;
     margin-left: $gutter/2;
+    list-style: none;
   }
 }
 
@@ -36,6 +41,7 @@ body {
 .post {
   ul {
     @extend %default-ul;
+    list-style-type: none;
   }
 
   ol {

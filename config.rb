@@ -6,7 +6,7 @@ ignore 'templates/*'
 
 # Create a new instance of WordPress. Replace the URL with the URL of your
 # rest server endpoint.
-wordpress = WordPress.new('http://petesmaluck.com/wp-json')
+wordpress = WordPress.new('http://bedrock.dev/wp-json')
 
 # Dynamically generate pages using wordpress data
 wordpress.posts.each do |post|
@@ -46,4 +46,15 @@ configure :build do
 
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
+end
+
+activate :deploy do |deploy|
+  deploy.method = :rsync
+  deploy.host   = 'smaluck.com'
+  deploy.path   = '/public_html/middleman'
+  # Optional Settings
+   deploy.user  = 'smaluck7' # no default
+  deploy.port  = 18765 # ssh port, default: 22
+  # deploy.clean = true # remove orphaned files on remote host, default: false
+  # deploy.flags = '-rltgoDvzO --no-p --del' # add custom flags, default: -avz
 end

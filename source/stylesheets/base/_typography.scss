@@ -3,8 +3,9 @@ body {
   -webkit-font-smoothing: antialiased;
   color: $base-font-color;
   font-family: $base-font-family;
-  font-size: $base-font-size;
+  font-size: $base-font-size*1.4;
   line-height: $base-line-height;
+  background: $base-background-color;
 }
 
 h1,
@@ -21,14 +22,16 @@ h6 {
 
 h1 {
   font-size: 2em;
+  letter-spacing: 1px;
 }
 
 h2 {
   font-size: 1.8em;
+  letter-spacing: 1px;
 }
 
 h3 {
-  font-size: 1.6em;
+  font-size: 3em;
 }
 
 h4 {
@@ -55,7 +58,7 @@ a {
   &:active,
   &:focus,
   &:hover {
-    color: darken($action-color, 15%);
+    color: darken(red, 15%);
   }
 
   &:active,
