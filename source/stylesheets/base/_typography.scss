@@ -31,7 +31,13 @@ h2 {
 }
 
 h3 {
-  font-size: 3em;
+  
+  @include media($small-screen) {
+    font-size: 2em;
+  }
+  @include media($large-screen) {
+    font-size: 3em;
+  }
 }
 
 h4 {

@@ -13,7 +13,7 @@ pagination:
 		<ul>
 		  <% pagination.each do |post| %>
 		  <a class="blog-link" href="/blog/<%= post['slug'] %>/">
-				<p class="italic"><%= post['title'] %></p>
+				<p><%= post['title'] %></p>
 		  </a>
 		  <% end %>
 		</ul>
@@ -24,7 +24,6 @@ pagination:
 <article class="wrapper post post-main span8 large-gutter-top">
     <hr>
     <div class="new-post">
-    	<p class="italic intro">Sup?</p>
 		<p class="intro">Hey, I'm Pete. I built this site to practice building static sites using Middleman and the Wordpress REST API. I am a web developer in Hamilton, Ontario. I work with a great team at <a href="http://wiseandhmmer.com">Wise and Hammer</a>.
 		<br>
 		<br>
