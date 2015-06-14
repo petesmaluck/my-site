@@ -20,12 +20,22 @@ main {
 footer {
 	margin: 0 auto;
 }
-.span4 {
-	@include span-columns(4);
+.span4 {	
+	@include media($small-screen) {
+		@include span-columns(12);
+	}
+	@include media($large-screen) {
+		@include span-columns(4);
+	}
 }
-.span8 {
-	@include span-columns(8);
-	max-width: 600px;
+.span8 {	
+	@include media($small-screen) {
+		@include span-columns(12);
+	}
+	@include media($large-screen) {
+		@include span-columns(8);
+		max-width: 600px;
+	}
 }
 
 //Float
@@ -57,5 +67,10 @@ small {
 
 //Gutter
 .large-gutter-top {
-	margin-top: $gutter*1.4;
+	@include media($small-screen) {
+		margin-top: 0;
+	}
+	@include media($large-screen) {
+		margin-top: $gutter*1.4;
+	}
 }

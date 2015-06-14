@@ -48,6 +48,12 @@ h6 {
 
 p {
   margin: 0 0 $small-spacing;
+  @include media($small-screen) {
+    font-size: .8em;
+  }
+  @include media($large-screen) {
+    font-size: 1em;
+  }
 }
 
 a {
