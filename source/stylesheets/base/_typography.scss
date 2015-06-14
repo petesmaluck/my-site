@@ -58,7 +58,7 @@ a {
   &:active,
   &:focus,
   &:hover {
-    color: darken(red, 15%);
+    color: $action-color-hover;
   }
 
   &:active,
@@ -73,6 +73,7 @@ hr {
   border-right: none;
   border-top: none;
   margin: $base-spacing 0;
+  max-width: 200px;
 }
 
 img,

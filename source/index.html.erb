@@ -5,26 +5,35 @@ pagination:
   per_page: 10
 ---
 
-<article class="wrapper post">
+<article class="wrapper post span4 left">
 	<header class="header">
-		<h3 class="bold">nachos</h3>
-		<hr>
-		<p class="italic">guac</p>
+		<a href="/"><h3 class="bold close" >pete<br>smaluck</h3></a>
 	</header>
-	<h2>we eat nachos. <br>then tell you how much we like them.</h2>
-	<br>
-	<ul>
-	  <% pagination.each do |post| %>
-	  <a style="color: #fff" href="/blog/<%= post['slug'] %>/">
-	  	<div class="posts">
-			<li><%= post['title'] %></li>
-		</div>
-	  </a>
-	  <% end %>
-	</ul>
+	<section>
+		<ul>
+		  <% pagination.each do |post| %>
+		  <a class="blog-link" href="/blog/<%= post['slug'] %>/">
+				<p class="italic"><%= post['title'] %></p>
+		  </a>
+		  <% end %>
+		</ul>
+	</section>
 
 	<div class="pager">
 	  <%= link_to "Prev page", pagination.prev_page.url, class: 'previous' if pagination.prev_page %>
 	  <%= link_to "Next page", pagination.next_page.url, class: 'next' if pagination.next_page %>
+	</div>
+</article>
+
+    
+<article class="wrapper post post-main span8 large-gutter-top">
+    <hr>
+    <div class="new-post">
+    	<p class="italic intro">Sup?</p>
+		<p class="intro">Hey, I'm Pete. I built this site to practice building static sites using Middleman and the Wordpress REST API. I am a web developer in Hamilton, Ontario. I work with a great team at <a href="http://wiseandhmmer.com">Wise and Hammer</a>.
+		<br>
+		<br>
+		I have been in Hamilton for over a decade now. When I'm not golfing at Chedoke you might catch me in the Jackson Square food court eating Taco Bell and drinking Mountain Dew, or at home watching Game of Thrones.
+		</p>
 	</div>
 </article>
